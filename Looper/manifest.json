@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Video Looper com Controle de Trecho",
+  "version": "1.2",
+  "description": "Adiciona controles de início e fim para repetir trechos de vídeos, inclusive em elementos incorporados.",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "all_frames": true
+    }
+  ]
+}

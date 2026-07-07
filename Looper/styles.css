@@ -1,0 +1,197 @@
+/* Painel fixado no canto inferior direito da tela */
+.custom-looper-panel {
+  background: rgba(28, 28, 28, 0.95);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  position: fixed; /* Fixa o elemento na tela do navegador */
+  bottom: 20px;
+  right: 20px;
+  z-index: 2147483647; /* Força o painel a ficar por cima de tudo */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 260px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  user-select: none;
+}
+
+.custom-looper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 6px;
+}
+
+.custom-looper-header label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.custom-looper-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.custom-looper-row span {
+  font-size: 11px;
+  color: #ccc;
+  min-width: 40px;
+}
+
+.custom-looper-slider {
+  flex-grow: 1;
+  height: 4px;
+  background: #444;
+  outline: none;
+  border-radius: 2px;
+  accent-color: #ff5722; /* Laranja do Brave */
+  cursor: pointer;
+}
+
+.custom-looper-time-display {
+  font-family: monospace;
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* Se o player incorporado for muito pequeno, ajusta o tamanho do painel */
+@media (max-width: 400px) {
+  .custom-looper-panel {
+    width: 180px;
+    padding: 6px;
+    bottom: 5px;
+    right: 5px;
+    font-size: 10px;
+  }
+  .custom-looper-row span {
+    min-width: 30px;
+    font-size: 9px;
+  }
+  .custom-looper-time-display {
+    font-size: 9px;
+  }
+}
+/* Botão circular para minimizar/maximizar */
+.custom-looper-toggle-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ff5722; /* Laranja do Brave */
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2147483647; /* Fica acima de tudo */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.custom-looper-toggle-btn:hover {
+  transform: scale(1.1);
+  background-color: #e64a19;
+}
+
+/* Painel de controle (ajustado para flutuar acima do botão) */
+.custom-looper-panel {
+  background: rgba(28, 28, 28, 0.96);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  position: fixed;
+  bottom: 70px; /* Posicionado acima do botão redondo */
+  right: 20px;
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 260px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  user-select: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.custom-looper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 6px;
+}
+
+.custom-looper-header label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.custom-looper-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.custom-looper-row span {
+  font-size: 11px;
+  color: #ccc;
+  min-width: 40px;
+}
+
+.custom-looper-slider {
+  flex-grow: 1;
+  height: 4px;
+  background: #444;
+  outline: none;
+  border-radius: 2px;
+  accent-color: #ff5722;
+  cursor: pointer;
+}
+
+.custom-looper-time-display {
+  font-family: monospace;
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* Estilo responsivo para telas ou iframes pequenos */
+@media (max-width: 400px) {
+  .custom-looper-panel {
+    width: 190px;
+    padding: 8px;
+    bottom: 55px;
+    right: 10px;
+    font-size: 10px;
+  }
+  .custom-looper-toggle-btn {
+    width: 32px;
+    height: 32px;
+    bottom: 15px;
+    right: 10px;
+    font-size: 13px;
+  }
+}
