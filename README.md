@@ -5,7 +5,7 @@ A Chrome-based browser extension for Brave (and other Chromium browsers).
 ## How to Install
 
 0. Download Looper.zip or Looper Folder in This Repo. 
-0.1. Open the **Extensions** tab in Brave (or any Chromium-based browser)
+01. Open the **Extensions** tab in Brave (or any Chromium-based browser)
 1. Enable **Developer Mode** (toggle in the top right)
 2. Click **Load Unpacked**
 3. Select the **LOOPER** folder
